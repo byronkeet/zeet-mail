@@ -1,15 +1,28 @@
-import Link from "next/link";
-import ButtonSignin from "@/components/ButtonSignin";
+import { Suspense } from "react";
 import Header from "@/components/Header";
-import FAQ from "@/components/FAQ";
 import Hero from "@/components/Hero";
-export default function Page() {
-  return (
-    <>
-      <div>
-        <Header/>
-        <Hero />
-      </div>
-    </>
-  );
+import Problem from "@/components/Problem";
+import FeaturesAccordion from "@/components/FeaturesAccordion";
+import Pricing from "@/components/Pricing";
+import FAQ from "@/components/FAQ";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
+
+export default function Home() {
+	return (
+		<>
+			<Suspense>
+				<Header />
+			</Suspense>
+			<main>
+				<Hero />
+				<Problem />
+				<FeaturesAccordion />
+				<Pricing />
+				<FAQ />
+				<CTA />
+			</main>
+			<Footer />
+		</>
+	);
 }
